@@ -4,15 +4,15 @@
 This repo contains the implementation of various algorithms as well as theoretical explanations. The implementations will be done in both a `OOP Language` and a `Purely Functional Programming Language`.
 Official language chosen to implement these algorithms are :
 
-* OOP : Java
-* Pure Functional : Haskell 
-* Eplanation document : PDF and Markdown
+* OOP : `Java`
+* Pure Functional : `Haskell` 
+* Explanation document : `PDF` and `Markdown`
 
 ## Guidlines for Contributor
 
 You are more than welcome to contribute and fix.
-* Accepted programming languages : Java, C, C++, C#, PHP, Go and Rust.
-* Explanation languages : English and Bengali.
+* Accepted programming languages : `Java`, `C`, `C++`, `C#`, `PHP`, `Go` and `Rust`.
+* Explanation languages : `English` and `Bengali`.
 
 Please raise an `issue` first then do a `pull request` later upon implementing it. Your unresponded `issue` will be closed after `30` days if you are unavailable.
 
