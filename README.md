@@ -28,9 +28,7 @@ Coding guidelines:
 
 ##  Repo Maintainer
 
-[A. A. Noman Ansary](https://github.com/showrav-ansary "A. A. Noman Ansary"),
-
-Tutorial Moderator, Content Team, [LightOJ](https://lightoj.com/home "LightOJ").
+[A. A. Noman Ansary](https://github.com/showrav-ansary "A. A. Noman Ansary")
 
 ### Contact 
 
