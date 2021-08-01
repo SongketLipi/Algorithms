@@ -16,6 +16,8 @@ You are more than welcome to contribute and fix.
 
 Please raise an `issue` first then do a `pull request` later upon implementing it. Your unresponded `issue` will be closed after `30` days if you are unavailable.
 
+__USE PROPER VARIABLE NAMING__.
+
 ##  Repo Maintainer
 
 [A. A. Noman Ansary](https://github.com/showrav-ansary "A. A. Noman Ansary"),
