@@ -16,7 +16,14 @@ You are more than welcome to contribute and fix. Do standard `issue` > `branch o
 
 Please raise an `issue` first then do a `pull request` later upon implementing it. Your unresponded `issue` will be closed after `30` days if you are unavailable.
 
-__USE PROPER VARIABLE NAMING__.
+Coding guidelines:
+
+* __USE PROPER VARIABLE/FUNCTION/METHOD NAMING__.
+* Do proper indentation.
+* Add comments so that people can relate to the explanations.
+* Follow the standards of your language.
+* If you are using a data structure specific to your language, mention the insertion/deletion/addition costs.
+
 
 ##  Repo Maintainer
 
