@@ -14,7 +14,7 @@ public class LongestCommonSubsequence{
     private static int GetLCSLength(int stringALength, int stringBlength){
         if (stringALength == 0 || stringBlength == 0)
             return 0;
-        if (stringACharacters[stringALength-1] == stringACharacters[stringBlength-1])
+        if (stringACharacters[stringALength-1] == stringBCharacters[stringBlength-1])
             return 1 + GetLCSLength( stringALength-1, stringBlength-1);
         else
             return max(GetLCSLength(stringALength, stringBlength-1),
