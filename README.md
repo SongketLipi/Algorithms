@@ -10,7 +10,7 @@ Official language chosen to implement these algorithms are :
 
 ## Guidlines for Contributor
 
-You are more than welcome to contribute and fix.
+You are more than welcome to contribute and fix. Do standard `issue` > `branch out` > `pull request`.
 * Accepted programming languages : `Java`, `C`, `C++`, `C#`, `PHP`, `Go` and `Rust`.
 * Explanation languages : `English` and `Bengali`.
 
