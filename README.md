@@ -11,7 +11,7 @@ Official language chosen to implement these algorithms are :
 ## Guidlines for Contributor
 
 You are more than welcome to contribute and fix. Do standard `issue` > `branch out` > `pull request`.
-* Accepted programming languages : `Haskell`, `Java`, `C`, `C++`, `C#`, `PHP`, `Python`, `Go` and `Rust`.
+* Accepted programming languages : `Haskell`, `Java`, `C`, `C++`, `C#`, `Python`, `Go` and `Rust`.
 * Explanation languages : `English` and `Bengali`.
 
 Please raise an `issue` first then do a `pull request` later upon implementing it. Your unresponded `issue` will be closed after `30` days if you are unavailable.
