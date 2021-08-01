@@ -2,22 +2,29 @@ import java.util.*;
 import java.io.*;
 
 public class LongestCommonSubsequence{
-    private static int GetLCSLength(char[] stringA, char[] stringB,
-                                    int stringALength, int stringBlength){
+
+    private static int stringALength; // length of Strring A; global access
+    private static int stringBlength; // length of Strring B; global acces
+    
+    // In Java, we can't directly iterate over the characters
+    private static char[] stringACharacters; // global access
+    private static char[] stringBCharacters; // global access
+
+    // A slave method to go through chars to find out the LCS
+    private static int GetLCSLength(int stringALength, int stringBlength){
         if (stringALength == 0 || stringBlength == 0)
             return 0;
-        if (stringA[stringALength-1] == stringB[stringBlength-1])
-            return 1 + GetLCSLength(stringA, stringB, stringALength-1, stringBlength-1);
+        if (stringACharacters[stringALength-1] == stringACharacters[stringBlength-1])
+            return 1 + GetLCSLength( stringALength-1, stringBlength-1);
         else
-            return max(GetLCSLength(stringA, stringB, stringALength, stringBlength-1),
-                       GetLCSLength(stringA, stringB, stringALength-1, stringBlength)
+            return max(GetLCSLength(stringALength, stringBlength-1),
+                       GetLCSLength(stringALength-1, stringBlength)
             );
     }
 
-    private static boolean IsSubsequence(char[] stringA, char[] stringB,
-                                         int stringALength, int stringBlength){
-        return (GetLCSLength(stringA, stringB,
-                             stringALength, stringBlength)
+    // Just a slave method to know if it's a suffix or not
+    private static boolean IsSubsequence(int stringALength, int stringBlength){
+        return (GetLCSLength(stringALength, stringBlength)
                 == stringBlength)? true : false;
 
     }
@@ -26,21 +33,23 @@ public class LongestCommonSubsequence{
         return (a > b)? a : b;
     }
 
+
+
     public static void main(String[] args){
         Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 
         System.out.println("Enter the String 1 : ");
         String stringA = in.nextLine();
-        char[] stringACharacters = stringA.toCharArray();
+        stringALength = stringA.length();
+        stringACharacters = stringA.toCharArray();
 
         System.out.println("Enter the String 2 : ");
         String stringB = in.nextLine();
-        char[] stringBCharacters = stringB.toCharArray();
+        stringBlength = stringB.length();
+        stringBCharacters = stringB.toCharArray();
 
         System.out.println("Is String 2 a Subsequence of String 1 : "
-                           + IsSubsequence(stringACharacters, stringBCharacters,
-                                           stringA.length(), stringB.length())
-        );
+                           + IsSubsequence(stringALength, stringBlength));
 
     }
 
