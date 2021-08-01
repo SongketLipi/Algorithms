@@ -6,6 +6,7 @@ Official language chosen to implement these algorithms are :
 
 * OOP : Java
 * Pure Functional : Haskell 
+* Eplanation document : PDF and Markdown
 
 ## Guidlines for Contributor
 
@@ -17,7 +18,8 @@ Please raise an `issue` first then do a `pull request` later upon implementing i
 
 ##  Repo Maintainer
 
-A. A. Noman Ansary,
+[A. A. Noman Ansary](https://github.com/showrav-ansary "A. A. Noman Ansary"),
+
 Tutorial Moderator, Content Team, [LightOJ](https://lightoj.com/home "LightOJ").
 
 ### Contact 
