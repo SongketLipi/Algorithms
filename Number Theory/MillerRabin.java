@@ -21,7 +21,6 @@ public class MillerRabin {
         return result; // value of (a^d % n)
     }
 
-    // The witness test with k trials called
     // A slave method that serves as an witness
     static boolean MiillerTestWtiness(int d, int n) {
         int a = 2 + (int)
@@ -62,6 +61,7 @@ public class MillerRabin {
         while (d % 2 == 0)
             d /= 2;
 
+        // Ask for k witnesses
         for (int test = 0; test < numberOfIterations; test++)
             if (!MiillerTestWtiness(d, number))
                 return false;
