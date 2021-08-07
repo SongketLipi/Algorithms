@@ -22,7 +22,7 @@ Coding guidelines:
 * Do proper indentation.
 * Add comments so that people can relate to the explanations.
 * Follow the standards of your language.
-* If you are using a data structure specific to your language, mention the insertion/deletion/addition costs.
+* If you are using a data structure specific to your language, mention the insertion/deletion/mutation/look up/prepend/append costs.
 * Include the code driver in the same file.
 
 
