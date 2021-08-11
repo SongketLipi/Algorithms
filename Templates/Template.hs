@@ -1,5 +1,5 @@
 -- function signature
--- functionName arg arg2 =
+-- functionName arg arg2 .. argn =
     -- implement
 
 
