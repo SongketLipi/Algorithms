@@ -9,7 +9,7 @@ import System.IO
 --main :: IO () -- function signature
 --main = do
     -- putStrLn "Enter Input :"
-    -- input <- getLine 
-    -- let x = (read input :: Int) -- do type conversion
+    -- input <- getLine -- take inputs as string
+    -- let x = (read input :: Type) -- do type conversion if required
     -- putStrLn "Output is : " -- output
     -- putStrLn ( show (function arg arg2 .. argn) :: String) -- computation output
