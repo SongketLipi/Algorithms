@@ -1,3 +1,5 @@
+-- put all of your imports in top
+import System.IO
 -- function signature
 -- functionName arg arg2 .. argn =
     -- implement
