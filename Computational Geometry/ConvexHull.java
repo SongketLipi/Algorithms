@@ -19,7 +19,7 @@ class Point {
 
 public class ConvexHull {
     // A slave method to get orientation
-    public static int GetOrientation(Point p, Point q, Point r) {
+    private static int GetOrientation(Point p, Point q, Point r) {
         int value = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
 
         if (value == 0)
@@ -31,7 +31,7 @@ public class ConvexHull {
     }
 
     // Prints convex hull of a set of n points.
-    public static void ComputeConvexHull(Point[] points) {
+    private static void ComputeConvexHull(Point[] points) {
         int numberOfPoints = points.length;
         if (numberOfPoints < 3)
             return;
