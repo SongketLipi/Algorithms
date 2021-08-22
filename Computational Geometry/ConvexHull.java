@@ -12,7 +12,8 @@ class Point {
         this.x = x;
         this.y = y;
     }
-    public String toString(){
+
+    public String toString() {
         return "(" + x + ", " + y + ")";
     }
 }
@@ -24,9 +25,9 @@ public class ConvexHull {
 
         if (value == 0)
             return 0; // collinear
-        if (value > 0) 
-            return 1; // clockwise since (+) value 
-        else  
+        if (value > 0)
+            return 1; // clockwise since (+) value
+        else
             return 2; // counterclockwise since (-) value
     }
 
@@ -43,8 +44,7 @@ public class ConvexHull {
             if (points[index].x < points[currentLeftMostPointindex].x)
                 currentLeftMostPointindex = index;
 
-        
-        int p = currentLeftMostPointindex; 
+        int p = currentLeftMostPointindex;
         int q;
         do {
             hulls.add(points[p]);
@@ -63,7 +63,6 @@ public class ConvexHull {
             System.out.println(point.toString());
     }
 
-    
     public static void main(String[] args) {
         Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
         System.out.println("Please enter how many points are there :");
@@ -72,14 +71,14 @@ public class ConvexHull {
         Point[] points = new Point[numberOfPoints];
 
         System.out.println("Please enter the points: ");
-        for(int i = 1; i <= numberOfPoints; i++){
+        for (int i = 1; i <= numberOfPoints; i++) {
             int x;
             int y;
-            System.out.println("Please enter the value of x for point "+ i + ": ");
+            System.out.println("Please enter the value of x for point " + i + ": ");
             x = in.nextInt();
-            System.out.println("Please enter the value of y for point "+ i + ": ");
+            System.out.println("Please enter the value of y for point " + i + ": ");
             y = in.nextInt();
-            points[i-1] = new Point(x, y);
+            points[i - 1] = new Point(x, y);
         }
         ComputeConvexHull(points);
     }
