@@ -6,15 +6,16 @@ import java.util.Scanner;
 
 public class EuclideanAlgorithm {
     // The Euclidian method to compute greatest common divisor
-    private static int Euclid(int a, int b){
+    private static int Euclid(int a, int b) {
         if (b == 0)
             return a;
         else
-            return Euclid(b, a%b);
+            return Euclid(b, a % b);
     }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
-        
+
         System.out.println("Enter the number a: ");
         int numberA = in.nextInt();
 
