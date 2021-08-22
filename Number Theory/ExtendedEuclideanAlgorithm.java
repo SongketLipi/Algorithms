@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.Vector;
-import java.util.concurrent.atomic.AtomicInteger; // Required for passing int by ref
+
 
 // A helper class to construct representation `ax + by = d`
 class AxBy {
@@ -28,25 +28,25 @@ class AxBy {
 public class ExtendedEuclideanAlgorithm {
     private static Vector<AxBy> representations = new Vector<>(); // A vector to store representations
 
-    private static int EuclidExtended(int a, int b, AtomicInteger x, AtomicInteger y) {
+    private static int EuclidExtended(int a, int b, int[] x, int[] y) {
         // base case
         if (a == 0) {
-            x.set(0); // ax = 0
-            y.set(1); // by = d
+            x[0] = 0; // ax = 0
+            y[0] = 1; // by = d
             return b; // b = d
         }
 
         // X Y pass by reference integers
-        AtomicInteger xPrime = new AtomicInteger();
-        AtomicInteger yPrime = new AtomicInteger();
+        int[] xPrime = new int[1];
+        int[] yPrime = new int[1];
 
         // d not reached, do recursion
         int d = EuclidExtended(b % a, a, xPrime, yPrime);
 
-        x.set(yPrime.get() - (b / a) * xPrime.get()); // Coefficient of A
-        y.set(xPrime.get()); // // Coefficient of B
+        x[0] = (yPrime[0] - (b / a) * xPrime[0]); // Coefficient of A
+        y[0] = (xPrime[0]); // // Coefficient of B
 
-        representations.add(new AxBy(a, b, x.get(), y.get())); // Add to representation vector
+        representations.add(new AxBy(a, b, x[0], y[0])); // Add to representation vector
 
         return d; // return GCD = d
     }
@@ -61,8 +61,8 @@ public class ExtendedEuclideanAlgorithm {
         int numberB = in.nextInt();
 
         // Create 2 pass by ref integers for recursion state updates
-        AtomicInteger coefficientX = new AtomicInteger();
-        AtomicInteger coefficientY = new AtomicInteger();
+        int[] coefficientX = new int[1];
+        int[] coefficientY = new int[1];
 
         System.out.println("The GCD is: " + EuclidExtended(numberA, numberB, coefficientX, coefficientY));
         System.out.println("a --- x --- b --- y");
