@@ -71,11 +71,12 @@ public class MillerRabin {
 
     public static void main(String args[]) {
         Scanner in = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
-        System.out.println("Please enter how many iterations you want (k): ");
-        int numberOfIterations = in.nextInt();
 
         System.out.println("Please enter the number (n): ");
         int number = in.nextInt();
+
+        System.out.println("Please enter how many iterations you want (k): ");
+        int numberOfIterations = in.nextInt();
 
         if (ProbablyPrime(number, numberOfIterations))
             System.out.println("Probably prime!");
